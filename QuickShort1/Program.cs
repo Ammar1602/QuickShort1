@@ -100,6 +100,26 @@ namespace QuickShort1
             }
             //sort the list on the left of pivot using quick short
             q_short(low, j - 1);
+
+            //sort the list on the right of pivot using quick short
+            q_short(j + 1, high);
+        }
+        void display()
+        {
+            Console.WriteLine("\n===================");
+            Console.WriteLine("Sorted array elements");
+            Console.WriteLine("=====================");
+
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+            Console.WriteLine("\nNumber of comparassion" );
+            Console.WriteLine("\nNumber of data movements"); 
+        }
+        int getSize()
+        {
+            return n;
         }
     }
 }
