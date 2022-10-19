@@ -75,13 +75,31 @@ namespace QuickShort1
                 }
                 camp_count++;
 
-                if (i < j) //if the greater element is on the left of the element
+                //Search for an element ;ess than or equal to pivot 
+                while ((arr[j] <= pivot) && (j >=low))
                 {
-
+                    j--;
+                    camp_count++;
                 }
+                camp_count++;
 
-
+                if ( i < j) // if the greater element is on the left of the element
+                {
+                    //swap the element at index i whit the element at index j
+                    swap(i, j);
+                    mov_count++;
+                }
             }
+            //j now constaint the index of the last element in the sorted list
+            
+            if (low < j)
+            {
+                //move the pivot to its correct posisition in the list
+                swap(low, j);
+                mov_count++;
+            }
+            //sort the list on the left of pivot using quick short
+            q_short(low, j - 1);
         }
     }
 }
