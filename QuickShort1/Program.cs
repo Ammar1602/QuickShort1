@@ -37,10 +37,33 @@ namespace QuickShort1
             for (int i = 0; i < n; i++)
             {
                 Console.Write("<" + (i + 1) + ">");
-                string s = Console.ReadLine();
+                string s1 = Console.ReadLine();
                 arr[i] = Int32.Parse(s1);
             }
         }
         //swaps the element at index x with the element at index y
+        void swap(int x, int y)
+        {
+            int temp;
+
+            temp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = temp;
+        }
+        public void q_short(int low, int high)
+        {
+            int pivot, i, j;
+            if (low > high)
+                return;
+
+            //Partition the list into two parts;
+            //one containing elements less that or equal to pivot
+            //Outher conntaining elements greather than pivot
+
+            i = low + 1;
+            j = high;
+
+            pivot = arr[low];
+        }
     }
 }
