@@ -68,17 +68,17 @@ namespace QuickShort1
             while (i <= j)
             {
                 //Search for an element greater than pivot
-                while ((arr[j] <= pivot ) && (j >=low))
+                while ((arr [i] <= pivot ) && (i >=low))
                 {
-                    j--;
+                    i++;
                     camp_count++;
                 }
                 camp_count++;
 
                 //Search for an element ;ess than or equal to pivot 
-                while ((arr[j] <= pivot) && (j >=low))
+                while ((arr[j] > pivot) && (j >=low))
                 {
-                    j--;
+                    j++;
                     camp_count++;
                 }
                 camp_count++;
