@@ -64,6 +64,24 @@ namespace QuickShort1
             j = high;
 
             pivot = arr[low];
+
+            while (i <= j)
+            {
+                //Search for an element greater than pivot
+                while ((arr[j] <= pivot ) && (j >=low))
+                {
+                    j--;
+                    camp_count++;
+                }
+                camp_count++;
+
+                if (i < j) //if the greater element is on the left of the element
+                {
+
+                }
+
+
+            }
         }
     }
 }
