@@ -8,6 +8,9 @@ namespace QuickShort1
 {
     class Program
     {
+        /// <summary>
+        /// main class
+        /// </summary>
         //array of integers to hold values 
         private int[] arr = new int[20];
         private int camp_count = 0;
@@ -21,16 +24,16 @@ namespace QuickShort1
         {
             while (true)
             {
-                Console.Write("Enter the number of element in the array");
+                Console.Write("Enter the number of element in the array");//Untuk memasukkan angka pada array
                 string s = Console.ReadLine();
                 n = Int32.Parse(s);
-                if (n <= 20)
+                if (n <= 20)//angka tidak bisa melebihi 20
                     break;
                 else
-                    Console.WriteLine("\nArray can have maximum 20 elementd \n");
+                    Console.WriteLine("\nArray can have maximum 20 elementd \n");//Jika element yang ada pada array melebihi 20
             }
             Console.WriteLine("\n==========");
-            Console.WriteLine("Enter Array Elements");
+            Console.WriteLine("Enter Array Elements");//masukkan array
             Console.WriteLine("\n===================");
 
             //get array elements 
@@ -76,7 +79,7 @@ namespace QuickShort1
                 camp_count++;
 
                 //Search for an element ;ess than or equal to pivot 
-                while ((arr[j] > pivot) && (j >=low))
+                while ((arr[j] < pivot) && (j >= low))
                 {
                     j++;
                     camp_count++;
